@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.ql-editor {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.blogs {
+  width: 60%;
+  margin: auto;
+  padding: 70px;
+}
+.blog {
+  width: 100%;
+  position: relative;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: max-content;
+}
+.blog::after {
+  content: "";
+  display: block;
+  width: 100%;
+  margin: auto;
+  height: 1.5px;
+  background-color: rgb(73, 73, 73);
+  position: absolute;
+  bottom: 0;
+}
+
+.blog-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 20px;
+  font-size: 1rem;
+  color: rgb(65, 65, 65);
+  font-weight: bold;
+}
+.author-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.blog-author {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.blog-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(34, 34, 34);
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+.blog-description {
+  font-size: 1.2rem;
+  line-height: 28px;
+}
+.blog-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.button {
+  background-color: rgb(73, 73, 73);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 15px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.label {
+  font-size: 4rem;
+  text-align: center;
+}
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(73, 73, 73);
+  width: 100%;
+  height: 50px;
+  outline: none;
+  font-size: 2rem;
+  color: rgb(73, 73, 73);
+  padding: 10px;
+}
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(73, 73, 73);
+}
+.blog {
+  height: 200px;
+}
+.blog-more {
+  height: auto;
+}
+.blog-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.truncatebtn {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+
+p,
+li,
+a {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: rgb(73, 73, 73);
+  margin-bottom: 10px;
+}
+h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: rgb(73, 73, 73);
+  margin-bottom: 10px;
+}
+h2 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: rgb(73, 73, 73);
+  margin-bottom: 10px;
+}
+h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: rgb(73, 73, 73);
+  margin-bottom: 10px;
+}
+h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(73, 73, 73);
+  margin-bottom: 10px;
+}
+h5 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: rgb(73, 73, 73);
+  margin-bottom: 10px;
+}
+h6 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(73, 73, 73);
+  margin-bottom: 10px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+.buttons.btn {
+  cursor: pointer;
+}
