@@ -89,6 +89,9 @@ body {
   margin: auto;
   margin-bottom: 30px;
   margin-top: 30px;
+  background-color: white;
+  padding: 25px;
+  border-radius: 5px;
 }
 .label {
   font-size: 4rem;
@@ -181,4 +184,28 @@ h6 {
 }
 .buttons.btn {
   cursor: pointer;
+}
+.navBar {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.link {
+  text-decoration: none;
+}
+.link:hover {
+  text-decoration: underline;
+}
+.blogPageEditor {
+  width: 100vw;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.152);
 }
