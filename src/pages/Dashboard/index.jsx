@@ -9,6 +9,7 @@ export default function Dashboard() {
     useBlog();
   const [editBlog, setEditBlog] = useState(null);
   const [value, setValue] = useState("");
+  const [editIndex, setEditIndex] = useState(null);
 
   const modules = {
     toolbar: [
@@ -22,9 +23,7 @@ export default function Dashboard() {
   };
   const placeholder = "Write Your thoughts here...";
   const { quill, quillRef } = useQuill({
-    // theme,
     modules,
-    // formats,
     placeholder,
   });
 
@@ -34,13 +33,9 @@ export default function Dashboard() {
     e.preventDefault();
     const newBlog = { blog: quill.root.innerHTML, title: value };
 
-    if (editBlog?.title) {
-      // const editedBlogs = blogs.map((blog) =>
-      //   blog.title === editBlog.title ? { ...blog, ...newBlog } : blog
-      // );
-      // setBlogs(editedBlogs);
-      editingBlog(editBlog, newBlog);
-      setEditBlog({ blog: "", title: "" });
+    if (editBlog !== null) {
+      editingBlog(editIndex, newBlog);
+      setEditBlog(null);
     } else {
       addBlog(newBlog);
     }
@@ -57,13 +52,12 @@ export default function Dashboard() {
     if (index >= 0 && index < blogs.length) {
       const currentBlog = blogs[index];
 
-      console.log(currentBlog.blog);
-
       setEditBlog({
         title: currentBlog.title,
         blog: currentBlog.blog,
       });
 
+      setEditIndex(index);
       setValue(currentBlog.title);
       quill.root.innerHTML = currentBlog.blog;
     }

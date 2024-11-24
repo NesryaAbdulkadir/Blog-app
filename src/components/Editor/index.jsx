@@ -4,7 +4,11 @@ import "quill/dist/quill.snow.css";
 
 export default function Editor({ value, setValue, quillRef, handleSubmit }) {
   return (
-    <form onSubmit={(e) => handleSubmit(e)} className="form">
+    <form
+      onSubmit={(e) => handleSubmit(e)}
+      onClick={(e) => e.stopPropagation()}
+      className="form"
+    >
       <input
         type="text"
         name="title"
@@ -16,7 +20,7 @@ export default function Editor({ value, setValue, quillRef, handleSubmit }) {
         autoFocus
       />
       <div className="editor">
-        <div ref={quillRef} className="editor-container" />
+        <div ref={quillRef} className="ql-container" />
       </div>
       <div>
         <button type="submit" className="button">
