@@ -38,9 +38,9 @@ export const BlogProvider = ({ children }) => {
   }
   function editingBlog(index, updatedBlog) {
     setBlogs((prevBlogs) => {
-      const blogCopy = [...prevBlogs]; // Create a copy of the existing blogs
-      blogCopy[index] = updatedBlog; // Update the specific blog
-      return blogCopy; // Return the new array to set it as the new state
+      const blogCopy = [...prevBlogs];
+      blogCopy[index] = updatedBlog;
+      return blogCopy;
     });
   }
 

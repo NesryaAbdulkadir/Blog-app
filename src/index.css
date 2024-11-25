@@ -12,8 +12,8 @@ body {
   line-height: 1.5;
 }
 .ql-container {
-  height: 100%; /* Ensure it takes the full height of the editor */
-  border: 1px solid #ccc; /* Optional: add a border for visibility */
+  height: 100%;
+  border: 1px solid #ccc;
 }
 .blogs {
   width: 60%;
@@ -224,4 +224,46 @@ h6 {
   width: 90%;
   margin: auto;
   padding: 30px;
+}
+.form-container {
+  width: 50%;
+  margin: auto;
+  padding: 30px;
+}
+
+.login-form fieldset,
+.register-form fieldset {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: none;
+}
+.login-form input,
+.register-form input {
+  width: 100%;
+  font-size: 1.5rem;
+}
+.login-form legend,
+.register-form legend {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.login-form button,
+.register-form button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  max-width: max-content;
+  font-size: 1.2rem;
+  background-color: rgb(88, 166, 255);
+  border: none;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.linkbtn {
+  background-color: white;
+  text-decoration: none;
+  border: none;
+  font-size: 1.2rem;
+  padding-bottom: 15px;
 }

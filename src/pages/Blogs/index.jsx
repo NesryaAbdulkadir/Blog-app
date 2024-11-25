@@ -8,6 +8,7 @@ import "quill/dist/quill.snow.css";
 export default function Blogs() {
   const { blogs, deleteBlog, editingBlog, addBlog, saveInLocalStorage } =
     useBlog();
+  console.log("Blogs component rendered", blogs);
 
   const [showEditor, setShowEditor] = useState(false);
   const [value, setValue] = useState("");

@@ -1,6 +1,7 @@
-import { Router, useRoutes } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
 import Dashboard from "../pages/Dashboard";
 import Blogs from "../pages/Blogs";
+import Auth from "../pages/Auth";
 
 export default function Routes() {
   const element = useRoutes([
@@ -12,6 +13,11 @@ export default function Routes() {
       path: "/blogs",
       element: <Blogs />,
     },
+    {
+      path: "/auth",
+      element: <Auth />,
+    },
   ]);
+
   return element;
 }
