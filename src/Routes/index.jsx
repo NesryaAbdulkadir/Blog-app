@@ -2,16 +2,25 @@ import { useRoutes } from "react-router-dom";
 import Dashboard from "../pages/Dashboard";
 import Blogs from "../pages/Blogs";
 import Auth from "../pages/Auth";
+import PrivateRoute from "../components/PrivateRoute";
 
 export default function Routes() {
   const element = useRoutes([
     {
       path: "/",
-      element: <Dashboard />,
+      element: (
+        <PrivateRoute>
+          <Dashboard />
+        </PrivateRoute>
+      ),
     },
     {
       path: "/blogs",
-      element: <Blogs />,
+      element: (
+        <PrivateRoute>
+          <Blogs />
+        </PrivateRoute>
+      ),
     },
     {
       path: "/auth",
