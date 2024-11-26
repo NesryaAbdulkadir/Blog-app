@@ -21,7 +21,7 @@ export default function Dashboard() {
       ["link"],
     ],
   };
-  const placeholder = "Write Your thoughts here...";
+  const placeholder = "Write content here...";
   const { quill, quillRef } = useQuill({
     modules,
     placeholder,

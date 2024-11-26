@@ -9,7 +9,7 @@ export default function CommonInput({
   onChange,
 }) {
   return (
-    <div>
+    <div className="flex flex-col gap-2">
       <label htmlFor={name}>{label}</label>
       <input
         type={type}
@@ -17,6 +17,7 @@ export default function CommonInput({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        className="w-full text-xl border-b-2 outline-none"
       />
     </div>
   );

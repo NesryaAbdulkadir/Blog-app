@@ -83,7 +83,10 @@ export default function Blogs() {
     <Fragment>
       <Blog blogs={blogs} handleDelete={handleDelete} handleEdit={handleEdit} />
       {showEditor && (
-        <div className="blogPageEditor" onClick={resetEditor}>
+        <div
+          className="w-screen m-auto absolute top-0 left-0 right-0 bottom-0 bg-[rgba(0,0,0,0.23)] z-10"
+          onClick={resetEditor}
+        >
           <Editor
             value={value}
             setValue={setValue}

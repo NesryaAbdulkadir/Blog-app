@@ -4,7 +4,6 @@ import CommonForm from "../CommonForm";
 import { doCreateUserWithEmailAndPassword } from "../../firebase/auth";
 import { useAuth } from "../../context/AuthContext";
 import { Navigate } from "react-router-dom";
-import Login from "../Login";
 
 const initalRegisterFormData = {
   name: "",
@@ -31,7 +30,7 @@ export default function Register({ setShowLogin }) {
     console.log(registerFormData);
   };
   return (
-    <div className="form-container">
+    <div className="w-[50%] m-auto p-10">
       {userLoggedIn && <Navigate to={"/"} replace={true} />}
       <CommonForm
         formData={registerFormData}
@@ -40,12 +39,18 @@ export default function Register({ setShowLogin }) {
         handleSubmit={handleSubmit}
         buttonText={"Sign Up"}
         ButtonType={"submit"}
-        className={"register-form"}
+        className="w-full flex flex-col gap-5 border-none"
         formTitle={"Register"}
+        inputClassName="w-full text-xl border-b-2 outline-none"
+        legendClassName="text-4xl font-bold"
+        buttonClassName="bg-blue-500 mb-10 bg-blue-400"
       />
       <small>
         Already have an account?{" "}
-        <button onClick={() => setShowLogin(true)} className="linkbtn">
+        <button
+          onClick={() => setShowLogin(true)}
+          className="bg-white border-none pb-5  text-xl hover:underline"
+        >
           Login
         </button>
       </small>

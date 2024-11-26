@@ -1,6 +1,7 @@
 // components/CommonForm/index.jsx
 import React from "react";
 import CommonButton from "../CommonButton";
+import CommonInput from "../CommonInput";
 
 const formTypes = {
   INPUT: "input",
@@ -15,38 +16,63 @@ export default function CommonForm({
   ButtonType,
   className,
   formTitle,
+  inputClassName,
+  legendClassName,
+  buttonClassName,
 }) {
   const renderElement = (element) => {
+    let content = null;
     switch (element.componentType) {
       case formTypes.INPUT:
-        return (
-          <input
-            key={element.name} // Add a key for each input
+        content = (
+          <CommonInput
+            key={element.name}
             type={element.type}
             name={element.name}
+            label={element.label}
             placeholder={element.placeholder}
-            value={formData[element.name] || ""} // Handle undefined
+            value={formData[element.name] || ""}
             onChange={(event) => {
               setFormData({
                 ...formData,
                 [event.target.name]: event.target.value,
               });
             }}
-            required={element.required} // Optional: add required attribute
+            required={element.required}
           />
         );
       default:
-        return null; // Add more case handling if necessary
+        content = (
+          <CommonInput
+            key={element.name}
+            type={element.type}
+            name={element.name}
+            label={element.label}
+            placeholder={element.placeholder}
+            className={inputClassName}
+            value={formData[element.name] || ""}
+            onChange={(event) => {
+              setFormData({
+                ...formData,
+                [event.target.name]: event.target.value,
+              });
+            }}
+            required={element.required}
+          />
+        );
     }
+    return content;
   };
 
   return (
     <form onSubmit={handleSubmit} className={className}>
-      <fieldset>
-        <legend>{formTitle}</legend>
-        {formControls.map((singleElement) => renderElement(singleElement))}
-        <CommonButton buttonText={buttonText} type={ButtonType} />
-      </fieldset>
+      <legend className={legendClassName}>{formTitle}</legend>
+      {formControls.map((singleElement) => renderElement(singleElement))}
+      <CommonButton
+        buttonText={buttonText}
+        className={buttonClassName}
+        type={ButtonType}
+      />
     </form>
   );
 }

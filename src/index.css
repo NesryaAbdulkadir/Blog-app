@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 * {
   margin: 0;
   padding: 0;
@@ -10,130 +13,12 @@ body {
 .ql-editor {
   font-size: 1.5rem;
   line-height: 1.5;
+  height: max-content;
 }
 .ql-container {
   height: 100%;
   border: 1px solid #ccc;
 }
-.blogs {
-  width: 60%;
-  margin: auto;
-  padding: 70px;
-}
-.blog {
-  width: 100%;
-  position: relative;
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-height: max-content;
-}
-.blog::after {
-  content: "";
-  display: block;
-  width: 100%;
-  margin: auto;
-  height: 1.5px;
-  background-color: rgb(73, 73, 73);
-  position: absolute;
-  bottom: 0;
-}
-
-.blog-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  gap: 20px;
-  font-size: 1rem;
-  color: rgb(65, 65, 65);
-  font-weight: bold;
-}
-.author-img {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-}
-.blog-author {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.blog-title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: rgb(34, 34, 34);
-  margin-bottom: 10px;
-  padding-left: 5px;
-}
-.blog-description {
-  font-size: 1.2rem;
-  line-height: 28px;
-}
-.blog-image {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-.button {
-  background-color: rgb(73, 73, 73);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-  margin-top: 15px;
-}
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 50%;
-  margin: auto;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  background-color: white;
-  padding: 25px;
-  border-radius: 5px;
-}
-.label {
-  font-size: 4rem;
-  text-align: center;
-}
-input {
-  background: transparent;
-  border: none;
-  border-bottom: 2px solid rgb(73, 73, 73);
-  width: 100%;
-  height: 50px;
-  outline: none;
-  font-size: 2rem;
-  color: rgb(73, 73, 73);
-  padding: 10px;
-}
-.title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: rgb(73, 73, 73);
-}
-.blog {
-  height: 200px;
-}
-.blog-more {
-  height: auto;
-}
-.blog-content {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.truncatebtn {
-  cursor: pointer;
-  color: blue;
-  text-decoration: underline;
-}
-
 p,
 li,
 a {
@@ -177,93 +62,4 @@ h6 {
   font-weight: bold;
   color: rgb(73, 73, 73);
   margin-bottom: 10px;
-}
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.buttons {
-  display: flex;
-  gap: 10px;
-}
-.buttons.btn {
-  cursor: pointer;
-}
-.navBar {
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
-.link {
-  text-decoration: none;
-}
-.link:hover {
-  text-decoration: underline;
-}
-.blogPageEditor {
-  width: 100vw;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.152);
-}
-@media screen and (max-width: 1024px) {
-  .header {
-    flex-direction: column;
-    align-items: start;
-  }
-}
-.blogs {
-  width: 90%;
-  margin: auto;
-  padding: 30px;
-}
-.form-container {
-  width: 50%;
-  margin: auto;
-  padding: 30px;
-}
-
-.login-form fieldset,
-.register-form fieldset {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  border: none;
-}
-.login-form input,
-.register-form input {
-  width: 100%;
-  font-size: 1.5rem;
-}
-.login-form legend,
-.register-form legend {
-  font-size: 2rem;
-  font-weight: bold;
-}
-.login-form button,
-.register-form button {
-  padding: 10px 15px;
-  border-radius: 5px;
-  max-width: max-content;
-  font-size: 1.2rem;
-  background-color: rgb(88, 166, 255);
-  border: none;
-  cursor: pointer;
-  margin-bottom: 15px;
-}
-.linkbtn {
-  background-color: white;
-  text-decoration: none;
-  border: none;
-  font-size: 1.2rem;
-  padding-bottom: 15px;
 }

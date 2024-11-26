@@ -28,7 +28,7 @@ export default function Login({ setShowLogin }) {
     }
   };
   return (
-    <div className="form-container">
+    <div className="w-[50%] m-auto p-10">
       {userLoggedIn && <Navigate to={"/"} replace={true} />}
       <CommonForm
         formData={loginFormData}
@@ -37,12 +37,20 @@ export default function Login({ setShowLogin }) {
         handleSubmit={handleSubmit}
         buttonText={"Sign In"}
         ButtonType={"submit"}
-        className={"login-form"}
+        className={"w-full flex flex-col gap-5 border-none"}
+        inputClassName={"w-full text-xl"}
+        legendClassName={"text-4xl font-bold"}
+        buttonClassName={
+          "px-5 py-2 rounded-md text-xl cursor-pointer mt-5 max-w-max bg-blue-500 mb-10"
+        }
         formTitle={"Login"}
       />
       <small>
         Don't have an account?{" "}
-        <button onClick={() => setShowLogin(false)} className="linkbtn">
+        <button
+          onClick={() => setShowLogin(false)}
+          className="bg-white border-none pb-5  text-xl hover:underline"
+        >
           Register
         </button>
       </small>
